@@ -19,59 +19,59 @@ DEMO
 3. 复制toutiaomini的请求地址即可成功启动完整的项目并访问
 
 ### 目录结构描述
-├── README.md                   		// help
+├── README.md                   		 // help   <Br/>   
 ├── views                       
-│   ├── 01.html					// 线上首页结构及js代码
-|   └── 02.html					// 线上详情页结构及js代码
+│ &nbsp;&nbsp;├── 01.html					// 线上首页结构及js代码<Br/>
+|   └── 02.html					// 线上详情页结构及js代码<Br/>
 ├── public  
-|    ├── 01.css					// 线上首页样式
-|	├── 02.css					// 线上详情页样式
-|	├── iconfont.css			// 引用的字体图标
-|	├── template-web.js			// 模板引擎用于渲染
-|	└── tool.js					// 轮播图辅助工具
-└── react-admin-client			//后台管理页面工作区
-	├── node_modules			//存放用包管理工具下载的包
-	├── public					//存放静态文件的文件夹
-	|   └── index.html			//给出root节点，用于渲染App组件
-	├── src						//主要代码存放的文件夹
-	│   ├── api					//存放API的文件夹
-	│   │   ├── ajax.js			//发送AJAX请求的js文件
-	|	|   └── index.js		//用ajax.js中的函数封装的与后端交互的API
-	│   ├── components			//组件文件夹
-	│   │   │
-	│   │   ├── EditEmailForm	//修改Email信息的组件
-	│   │   ├── EditGenderForm	//修改性别的组件
-	│   │   ├── EditNickForm	//修改用户名的组件
-	│   │   ├── EditPWDForm		//修改密码的组件
-	│   │   ├── LeftNav			//左部导航栏组件
-	│   │   ├── NormalLoginForm	//登录组件
-	│   │   ├── PictureWall		//照片墙组件
-	│   │   │ 
-	│   │	├── RichTextEditor	//富文本编辑框组件
-	│   │   ├── ShowSquare		//鼠标悬停在用户头像上方显示的下拉菜单组件
-	│   │   └── TopHeader		//页面头部区域组件
-	│   ├── config				//配置文件夹
-	│   │   ├── articleTypeConfig.js	//存放文章类型-值对的对象数组
-	|	|   └── menuConfig.js			//存放左部导航栏菜单信息的对象数组
-	│   ├── pages				//页面文件夹（路由组件文件夹）
-	│   │   ├── Admin			//后台管理页面
+|   ├── 01.css					// 线上首页样式<Br/>
+|   ├── 02.css					// 线上详情页样式<Br/>
+|   ├── iconfont.css			        // 引用的字体图标<Br/>
+|   ├── template-web.js			        // 模板引擎用于渲染<Br/>
+|   └── tool.js					// 轮播图辅助工具<Br/>
+└── react-admin-client				//后台管理页面工作区<Br/>
+    ├── node_modules			//存放用包管理工具下载的包<Br/>
+    ├── public					//存放静态文件的文件夹<Br/>
+    |   └── index.html			//给出root节点，用于渲染App组件<Br/>
+    ├── src						//主要代码存放的文件夹<Br/>
+    │   ├── api					//存放API的文件夹<Br/>
+    │   │   ├── ajax.js			//发送AJAX请求的js文件<Br/>
+    |	|   └── index.js		//用ajax.js中的函数封装的与后端交互的API<Br/>
+    │   ├── components			//组件文件夹<Br/>
+    │   │   │
+    │   │   ├── EditEmailForm	//修改Email信息的组件<Br/>
+    │   │   ├── EditGenderForm	//修改性别的组件<Br/>
+    │   │   ├── EditNickForm	//修改用户名的组件<Br/>
+    │   │   ├── EditPWDForm		//修改密码的组件<Br/>
+    │   │   ├── LeftNav			//左部导航栏组件<Br/>
+    │   │   ├── NormalLoginForm	//登录组件<Br/>
+    │   │   ├── PictureWall		//照片墙组件<Br/>
+    │   │   │ 
+    │   │   ├── RichTextEditor	//富文本编辑框组件<Br/>
+    │   │   ├── ShowSquare		//鼠标悬停在用户头像上方显示的下拉菜单组件<Br/>
+    │   │   └── TopHeader		//页面头部区域组件<Br/>
+	│   ├── config				//配置文件夹<Br/>
+	│   │   ├── articleTypeConfig.js	//存放文章类型-值对的对象数组<Br/>
+	|	|   └── menuConfig.js			//存放左部导航栏菜单信息的对象数组<Br/>
+	│   ├── pages				//页面文件夹（路由组件文件夹）<Br/>
+	│   │   ├── Admin			//后台管理页面<Br/>
 	|	│   │   │ 
-	|	│   │   ├── AdminList	//文章列表
-	|	│   │   ├── AdminLuru	//文章录入|编辑
-	|	│   │   ├── Home		//主页
-	|	|	|   └── InfoChange	//个人信息页面
-	|	|   └── Login			//登录注册页面
-	|	│       ├── Log			//登录
-	|	|		└── Reister		//注册
-	│   ├── utils
-	|	|   └── storageUtils.js	//存放封装好的本地存储函数，用于保存用户信息和当前编辑的文章信息
-	│   ├── App.js				//App组件
-	|   └── index.js			//渲染App组件到页面
-	├── .eslintcache	
-	├── .gitignore
-	├── config-overrides.js		//定义antd主题
-	├── package.json			//已经下载好的包
-	└── package-lock.json
+	|	│   │   ├── AdminList	//文章列表<Br/>
+	|	│   │   ├── AdminLuru	//文章录入|编辑<Br/>
+	|	│   │   ├── Home		//主页<Br/>
+	|	|	|   └── InfoChange	//个人信息页面<Br/>
+	|	|   └── Login			//登录注册页面<Br/>
+	|	│       ├── Log			//登录<Br/>
+	|	|		└── Reister		//注册<Br/>
+	│   ├── utils<Br/>
+	|	|   └── storageUtils.js	//存放封装好的本地存储函数，用于保存用户信息和当前编辑的文章信息<Br/>
+	│   ├── App.js				//App组件<Br/>
+	|   └── index.js			//渲染App组件到页面<Br/>
+	├── .eslintcache	<Br/>
+	├── .gitignore<Br/>
+	├── config-overrides.js		//定义antd主题<Br/>
+	├── package.json			//已经下载好的包<Br/>
+	└── package-lock.json<Br/>
 
 ### 团队分工（仅完成加分项中的点赞点踩）
 - 后台管理页面(采用react框架,react-admin-client):李有庆
