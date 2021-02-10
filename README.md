@@ -57,18 +57,18 @@ DEMO
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── AdminList	//文章列表<Br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── AdminLuru	//文章录入|编辑<Br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── Home		//主页<Br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs;└── InfoChange	//个人信息页面<Br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── InfoChange	//个人信息页面<Br/>
 	|	|   └── Login			//登录注册页面<Br/>
-	|	│       ├── Log			//登录<Br/>
+	|	|       |── Log			//登录<Br/>
 	|	|		└── Reister		//注册<Br/>
-	│   ├── utils<Br/>
+	|   |── utils<Br/>
 	|	|   └── storageUtils.js	//存放封装好的本地存储函数，用于保存用户信息和当前编辑的文章信息<Br/>
-	│   ├── App.js				//App组件<Br/>
+	|   |── App.js				//App组件<Br/>
 	|   └── index.js			//渲染App组件到页面<Br/>
-	├── .eslintcache	<Br/>
-	├── .gitignore<Br/>
-	├── config-overrides.js		//定义antd主题<Br/>
-	├── package.json			//已经下载好的包<Br/>
+	|── .eslintcache	<Br/>
+	|── .gitignore<Br/>
+	|── config-overrides.js		//定义antd主题<Br/>
+	|── package.json			//已经下载好的包<Br/>
 	└── package-lock.json<Br/>
 
 ### 团队分工（仅完成加分项中的点赞点踩）
