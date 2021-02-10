@@ -20,16 +20,16 @@ DEMO
 
 ### 目录结构描述
 
-|── README.md                   		 // help<Br/>
-|── views                      
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |── 01.html					// 线上首页结构及js代码<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 02.html					// 线上详情页结构及js代码<Br/>
-|── public  
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── 01.css					// 线上首页样式<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── 02.css					// 线上详情页样式<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── iconfont.css			        // 引用的字体图标<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── template-web.js			        // 模板引擎用于渲染<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── tool.js					// 轮播图辅助工具<Br/>
+ |── README.md                   		 // help<Br/>
+ |── views                      
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |── 01.html					// 线上首页结构及js代码<Br/>
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 02.html					// 线上详情页结构及js代码<Br/>
+ |── public  
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── 01.css					// 线上首页样式<Br/>
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── 02.css					// 线上详情页样式<Br/>
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── iconfont.css			        // 引用的字体图标<Br/>
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── template-web.js			        // 模板引擎用于渲染<Br/>
+ | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── tool.js					// 轮播图辅助工具<Br/>
 └── react-admin-client				//后台管理页面工作区<Br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|── node_modules			//存放用包管理工具下载的包<Br/>
     |── public					//存放静态文件的文件夹<Br/>
