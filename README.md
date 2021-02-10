@@ -19,10 +19,11 @@ DEMO
 3. 复制toutiaomini的请求地址即可成功启动完整的项目并访问
 
 ### 目录结构描述
-├── README.md                   		 // help   <Br/>   
-├── views                       
-│ &nbsp;&nbsp;├── 01.html					// 线上首页结构及js代码<Br/>
-|   └── 02.html					// 线上详情页结构及js代码<Br/>
+
+├── README.md                   		 // help
+├── views                      
+│ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 01.html					// 线上首页结构及js代码<Br/>
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 02.html					// 线上详情页结构及js代码<Br/>
 ├── public  
 |   ├── 01.css					// 线上首页样式<Br/>
 |   ├── 02.css					// 线上详情页样式<Br/>
