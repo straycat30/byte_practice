@@ -1,7 +1,7 @@
 DEMO
 ===========================
 
-###########启动项目
+###启动项目
 此项目已经通过轻服务部署完成可直接用浏览器打开views目录中01.html运行,也可访问[](https://qc8o4l.fn.thelarkcloud.com/toutiaominni),若想将项目部署于其他账号,部署方法如下(以轻服务为例,方法繁琐仅供参考):
 - 部署react-admin-client
 1. 打包:npm run build生成build文件夹，用于部署在服务器上
