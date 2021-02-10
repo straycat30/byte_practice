@@ -1,0 +1,20 @@
+.home-body{
+    background-color: white;
+    margin:20px;
+    height:94%;
+    width:96%;
+}
+.home-region{
+    height:100%;
+    width:33%;
+    float:left;
+    overflow: auto;
+}
+.home-data{
+    display: inline-block;
+    margin-left: 45%;
+    margin-top:10%;
+}
+.home-data:hover{
+    cursor: pointer;
+}

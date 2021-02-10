@@ -1,0 +1,20 @@
+const articletypelist = [
+    { value: 1, type: '科技' },
+    { value: 2, type: '娱乐' },
+    { value: 3, type: '游戏' },
+    { value: 4, type: '体育' },
+    { value: 5, type: '汽车' },
+    { value: 6, type: '财经' },
+    { value: 7, type: '数码' },
+    { value: 9, type: '军事' },
+    { value: 10, type: '国际' },
+    { value: 11, type: '时尚' },
+    { value: 12, type: '旅游' },
+    { value: 13, type: '探索' },
+    { value: 14, type: '育儿' },
+    { value: 15, type: '养生' },
+    { value: 16, type: '美文' },
+    { value: 17, type: '历史' },
+    { value: 18, type: '美食' },
+]
+export default articletypelist

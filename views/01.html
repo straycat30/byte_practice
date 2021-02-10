@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>今日头条mini</title>
+		<link href="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/d5b25fd79c7336b5_1612854164766.css" rel="stylesheet">
+		<script src="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/927e08f8fa6b9be3_1612372676653.js"></script>
+		<script src="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/d0cbe836c9aea579_1612260349174.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div id="root">
+			<div class="channel-container">
+				<div class="toutiao-header">
+					<div class="topbar">
+						<div class="home-left-nav">
+							<a class="download-app tb-link" href="https://www.toutiao.com/" target="_blank" rel="noopener noreferrer">原版地址</a>
+							<a class="register-mp tb-link" href="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/ee5cc490c233de72_1612866289895.html#/login/register" target="_blank" rel="noopener noreferrer">注册头条</a>
+						</div>
+						<div class="right-nav">
+							<ul class="user-nav-list">
+								<li class="tb-item new-article">
+									<a class="tb-link" href="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/ee5cc490c233de72_1612866289895.html#/admin/luru/input" target="_blank" rel="noopener noreferrer">发文</a>
+								</li>
+								<li class="tb-item userbox">
+									<div class="username">
+										<a class="user-head" target="_blank" rel="noopener noreferrer">
+											<script type="text/html"id="user-head-tpl">
+												<div class="user-image">
+												<img src={{useravatar}}>
+												</div>
+												<span title="">{{username}}</span>
+											</script>	
+										</a>
+									</div>
+								</li>
+								<span class="logout-box"><a class="logout" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni">退出</a></span>
+							</ul>
+						</div>
+					</div>
+					<div class="main-content">
+						<div class="channelbox-container">
+							<div class="channel">
+								<a class="logo" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni" alt="今日头条MINI">
+									 头条MINI
+								</a>
+								<ul>
+									<li><a class="channel-item" >全部</a></li>
+									<li><a class="channel-item" >科技</a></li>
+									<li><a class="channel-item" >娱乐</a></li>
+									<li><a class="channel-item" >游戏</a></li>
+									<li><a class="channel-item" >体育</a></li>
+									<li><a class="channel-item" >汽车</a></li>
+									<li><a class="channel-item" >财经</a></li>
+									<li><a class="channel-item" >数码</a></li>
+									<li class="channel-more"><a class="channel-item">更多</a>
+										<div class="channel-more-layer">
+											<ul>
+												<li><a class="channel-item" >军事</a></li>
+												<li><a class="channel-item" >国际</a></li>
+												<li><a class="channel-item" >时尚</a></li>
+												<li><a class="channel-item" >旅游</a></li>
+												<li><a class="channel-item" >探索</a></li>
+												<li><a class="channel-item" >育儿</a></li>
+												<li><a class="channel-item" >养生</a></li>
+												<li><a class="channel-item" >美文</a></li>
+												<li><a class="channel-item" >历史</a></li>
+												<li><a class="channel-item" >美食</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="feed-container">
+							<div class="feedbox-wrapper">
+								<div id="header">
+									你&nbsp &nbsp &nbsp的&nbsp &nbsp &nbsp关&nbsp &nbsp &nbsp心&nbsp &nbsp &nbsp才&nbsp &nbsp &nbsp是&nbsp &nbsp
+									&nbsp头&nbsp &nbsp &nbsp条
+								</div>
+								<div class="feed-box">
+									<div class="feed-list" id="feed-list-a">
+										<script type="text/html" id="single-mode-Temp">
+											{{each data}}
+										<div class="single-mode">
+											<div class="single-mode-lbox">
+												<a class="img-wrap todetail" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni?id={{$value._id}}" target="_blank" rel="noopener noreferrer">
+													<img src={{$value.title_img}} class="lazy-load-img">
+												</a>
+											</div>
+											<div class="single-mode-rbox">
+												<div class="single-mode-rbox-inner">
+													<div class="title-box">
+														<a class="link todetail" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni?id={{$value._id}}" 
+														target="_blank" rel="noopener noreferrer">{{$value.title_name}}</a>
+													</div>
+													<div class="footer-bar">
+														<div class="footer-bar-left">
+															<span class="footer-bar-action media-avatar">
+																<img src={{$value.author.avatar}}>
+															</span>
+									
+															<span class="footer-bar-action source" >
+																{{$value.author.nickname}}
+															</span>
+															<span class="footer-bar-action time">&nbsp·&nbsp</span>
+															<span class="footer-bar-action source" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni?id={{$value._id}}#comment-area" target="_blank" rel="noopener noreferrer">
+															{{$value.good}}点赞
+															</span>
+															<span class="footer-bar-action time">&nbsp·&nbsp</span>
+															<span class="footer-bar-action time">{{$value.createdAtc}}</span>
+														</div>
+												
+													</div>
+												</div>
+											</div>
+										</div>
+									{{/each}}
+									</script>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="right-container">
+							<div class="search-container">
+								<div class="search-wrapper">
+									<input class="search-input" name="keywords" placeholder="搜索站内资讯、视频或用户" value="">
+									<div class="search-btn">
+										<button type="button">搜索</button>
+									</div>
+								</div>
+							</div>
+							<div id="hot-container">
+								<div id="hot-title">
+									<h2>热点</h2>
+								</div>
+								<div id="lunbo">
+									
+									<ul id="imgList">
+									<script type="text/html" id="lunbo-img-Temp">
+									{{each img_data}}
+										<li>
+											<a class="todetail" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni?id={{$value._id}}"target="_blank"rel="noopener noreferrer">
+											<img src={{$value.title_img}} />
+											</a>
+										</li>
+									{{/each}}
+									</script>
+									</ul>
+									<div id="naDiv">
+										<a class="nava"></a>
+										<a class="nava"></a>
+										<a class="nava"></a>
+										<a class="nava"></a>
+										<a class="nava"></a>
+									</div>
+								</div>
+								<ul class="title-list">
+									<script type="text/html" id="lunbo-title-Temp">
+									{{each title_data}}
+									<li>
+										<a class="todetail" href="https://qc8o4l.fn.thelarkcloud.com/toutiaominni?id={{$value._id}}"target="_blank"rel="noopener noreferrer">{{$value.title_name}}</a>
+									</li>
+									{{/each}}
+									</script>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="toolbar">
+							<div class="download shadow"><img src="https://sf3-dycdn-tos.pstatp.com/obj/eden-cn/pipieh7nupabozups/toutiao_web_pc/download.png"
+								 alt="">
+								<p>扫码下载今日头条</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+	</body>
+	
+	<script type="text/javascript">
+		var LocString = String(window.document.location.href);
+		function GetQueryString(name) {
+		    var rs = new RegExp("(^|)" + name + "=([^&]*)(&|$)", "gi").exec(LocString), tmp;
+		    if (tmp = rs) {
+		        return decodeURI(tmp[2]);
+		    }
+		    return 0;
+		}
+		//从url中获取参数的函数;
+		
+		var r;//存从后端返回数据的临时数组
+		var num=10;//首次加载到首页的文章标题数
+		var item=document.getElementsByClassName("channel-item");
+		var typ_num=GetQueryString("param");
+		item[typ_num].style.backgroundColor ='#ed4040';
+		//进入首页时将左导航条中选中的项设为红色
+		var user_key=JSON.parse(localStorage.getItem('user_key') || null);//取本地存的用户数据
+		//头部导航条中登录(用户)按钮的渲染处理
+		var userhead=document.getElementsByClassName("user-head")[0];
+		document.getElementsByClassName("logout")[0].onclick=function(){
+			localStorage.removeItem('user_key');
+		}
+		if(user_key==null){
+			userhead.innerHTML=template("user-head-tpl",{useravatar:"https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/660af12be02a42a5_1612839672326.png",username:"登录"});
+			userhead.href="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/ee5cc490c233de72_1612866289895.html#/login/log";
+			document.getElementsByClassName("logout-box")[0].style.display="none";
+		}
+		else{
+			userhead.innerHTML=template("user-head-tpl",{useravatar:user_key.avatar,username:user_key.nickname});
+			userhead.href="https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qc8o4l/ee5cc490c233de72_1612866289895.html#";
+			document.getElementsByClassName("logout-box")[0].style.display="inline-block";
+		}
+		//主内容区动条加载文章标题列表的数据请求及渲染处理
+		axios.post('https://qc8o4l.fn.thelarkcloud.com/get_all_title',{type:parseInt(typ_num)})
+			.then(function(response) {
+				r = response.data.test;
+				var arr = [];
+				var j = 0;
+				for (var i= r.length - 1; i >= r.length - num; i--) {
+					if(i<0)break;
+					arr[j] = r[i];
+					arr[j].createdAtc=timechange(arr[j].createdAt);
+					arr[j].good=(arr[j].good_num>10000)?""+parseInt((arr[j].good_num/10000)*10)/10+"万":""+arr[j].good_num;
+					j++;
+				}
+				var html = template('single-mode-Temp', {
+					data: arr
+				});
+				document.getElementById('feed-list-a').innerHTML = html;
+			})
+			.catch(function(error) {
+				console.log(error);
+			})
+			.then(function() {
+			});
+			
+		//右侧热点轮播图数据请求和渲染
+		axios.get('https://qc8o4l.fn.thelarkcloud.com/get_all_title')
+			.then(function(response) {
+				var r = response.data.test;
+				for(var i=0;i<=r.length-1;i++)
+				{
+					r[i].hotp=(r[i].good_num-r[i].bad_num)+r[i].comment_num;
+				}
+				
+				var arr_hot=r.sort(function(a,b){return b.hotp-a.hotp});
+				var arr0=arr_hot[0];
+				var arr1=arr_hot.slice(0,5);
+				var arr=arr1.concat(arr0);
+				var html_lunbo_img = template('lunbo-img-Temp', {
+					img_data: arr
+				});
+				document.getElementById('imgList').innerHTML = html_lunbo_img;
+				
+				var html_lunbo_title = template('lunbo-title-Temp', {
+					title_data: arr_hot.slice(0,5)
+				});
+				document.getElementsByClassName('title-list')[0].innerHTML = html_lunbo_title;
+				
+			})
+			.catch(function(error) {
+				console.log(error);
+			})
+			.then(function() {
+
+			});
+			
+		//轮播效果的渲染
+		var index = 0;
+		var div = document.getElementById('naDiv')
+		var imgList = document.getElementById("imgList");
+		//var imgArr = imgList.getElementsByTagName("img");
+		var allA = document.getElementsByClassName('nava');
+		console.log(allA);
+		allA[index].style.backgroundColor = "black";
+		for (var i = 0; i < allA.length; i++) {
+			allA[i].num = i;
+			allA[i].onclick = function() {
+				clearInterval(timer);
+				index = this.num;
+				setA();
+				move(imgList, -350 * index, 25, "left", function() {
+					autoChange();
+				})
+			}
+		}
+		autoChange();
+		
+		function setA() {
+			if (index >= 5) {
+				index = 0;
+				imgList.style.left = 0;
+			}
+			for (var i = 0; i < allA.length; i++) {
+				allA[i].style.backgroundColor = "";
+			}
+			allA[index].style.backgroundColor = "black";
+		}
+		var timer;
+		
+		function autoChange() {
+			timer = setInterval(function() {
+				index++;
+				index %= 6;
+				move(imgList, -350 * index, 25, "left", function() {
+					setA()
+				});
+			}, 2000)
+		}
+		
+		//下拉滚轴动响应式动态加载文章标题
+		window.addEventListener('scroll',function(){
+		 var h=document.documentElement.scrollTop|| window.pageYOffset || document.body.scrollTop;
+		 if(10+parseInt(h/120)>num){
+			 num=10+parseInt(h/120);
+			 var arr = [];
+			 var j = 0;
+			 for (var i= r.length - 1; i >= r.length - num; i--) {
+				if(i<0)break;
+			 	arr[j] = r[i];
+				arr[j].createdAtc=timechange(arr[j].createdAt);
+				arr[j].good=(arr[j].good_num>10000)?""+parseInt((arr[j].good_num/10000)*10)/10+"万":""+arr[j].good_num;
+			 	j++;
+			 }
+			 var html = template('single-mode-Temp', {
+			 	data: arr
+			 });
+			 document.getElementById('feed-list-a').innerHTML = html;
+		 }
+		},false);
+		
+		//时间格式转化函数
+		function timechange(a){
+			var myDate = new Date();
+			var year=parseInt(a.substring(0,4));
+			var month=parseInt(a.substring(5,7))-1;
+			var day=parseInt(a.substring(8,10));
+			var hour=parseInt(a.substring(11,14))+8;
+			var minute=parseInt(a.substring(14,17));
+			var date1=new Date(year,month,day,hour,minute);
+			var diff_minutes=parseInt(Math.abs(myDate-date1)/1000/60);
+			if(diff_minutes<60)
+			{
+				return ""+diff_minutes+"分钟前"	
+			}
+			else if(diff_minutes<1440)
+			{
+				return ""+parseInt(diff_minutes/60)+"小时前"
+			}
+			else if(diff_minutes<10080)
+			{
+				return ""+parseInt(diff_minutes/1440)+"天前"
+			}
+			else{
+				return "已下线"
+			}
+		}
+
+		
+		//点击左侧分类导航标的数据请求及渲染
+		for(var idx=0;idx<19;idx++)
+		{
+			item[idx].num = idx;
+			if(item[idx].innerHTML!="更多")
+			{
+				item[idx].onclick = function(){
+
+					for (var i = 0; i < item.length; i++) {
+						item[i].style.backgroundColor = "";
+					}
+					item[this.num].style.backgroundColor ='#ed4040';
+					axios.post('https://qc8o4l.fn.thelarkcloud.com/get_all_title',{type:this.num})
+						.then(function(response) {
+							r = response.data.test;
+							var arr = [];
+							var j = 0;
+							for (var i= r.length - 1; i >= r.length - num; i--) {
+								if(i<0)break;
+								arr[j] = r[i];
+								arr[j].createdAtc=timechange(arr[j].createdAt);
+								arr[j].good=(arr[j].good_num>10000)?""+parseInt((arr[j].good_num/10000)*10)/10+"万":""+arr[j].good_num;
+								j++;
+							}
+							var html = template('single-mode-Temp', {
+								data: arr
+							});
+							document.getElementById('feed-list-a').innerHTML = html;	
+						})
+						.catch(function(error) {
+							console.log(error);
+						})
+						.then(function() {
+						});
+				}
+			}	
+		}
+		
+		//搜索框的搜索按钮点击请求数据及渲染
+		var btn=document.getElementsByClassName("search-btn")[0];
+		btn.onclick=function(){
+			axios.post('https://qc8o4l.fn.thelarkcloud.com/get_all_title',{keywords:kw})
+				.then(function(response) {
+					var r1 = response.data.result_1;
+					var r2 = response.data.result_2;
+					var arr_c;
+					if(r2==null){arr_c=r1;}
+					else{arr_c = r2.concat(r1);}
+					var j = 0;
+					var arr=[];
+					for (var i= arr_c.length - 1; i >= 0; i--) {
+						if(i<0)break;
+						arr[j] = arr_c[i];
+						arr[j].createdAtc=timechange(arr[j].createdAt);
+						arr[j].good=(arr[j].good_num>10000)?""+parseInt((arr[j].good_num/10000)*10)/10+"万":""+arr[j].good_num;
+						j++;
+					}
+					var html = template('single-mode-Temp', {
+						data: arr
+					});
+					document.getElementById('feed-list-a').innerHTML = html;
+				})
+				.catch(function(error) {
+					alert("no match");
+					console.log(error);
+				})
+				.then(function() {
+				});
+		}
+		
+	</script>
+</html>

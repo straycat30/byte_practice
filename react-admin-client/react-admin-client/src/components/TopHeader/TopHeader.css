@@ -1,0 +1,32 @@
+.top-header{
+background-color: white;
+}
+.biaoti{
+    display: inline-block;
+    font-size:25px;
+    color:red;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left:20px;
+}
+.biaoti:hover{
+    cursor:pointer;
+}
+.h-title{
+    color:rgb(141, 142, 138);
+    font-size: 18px;
+    margin-left:50px;
+}
+.huanying{
+   position:relative;
+   display: inline-table;
+   left:75%;
+   color:black;
+   z-index:2
+}
+.huanying:hover{
+    cursor: pointer;
+}
+.duihuakuang{
+    position: relative;
+    left:-25px;
+}
