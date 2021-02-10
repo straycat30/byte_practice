@@ -1,7 +1,7 @@
 DEMO
 ===========================
 
-###启动项目
+### 启动项目
 此项目已经通过轻服务部署完成可直接用浏览器打开views目录中01.html运行,也可访问[](https://qc8o4l.fn.thelarkcloud.com/toutiaominni),若想将项目部署于其他账号,部署方法如下(以轻服务为例,方法繁琐仅供参考):
 - 部署react-admin-client
 1. 打包:npm run build生成build文件夹，用于部署在服务器上
@@ -21,14 +21,14 @@ DEMO
 ###########目录结构描述
 ├── README.md                   // help
 ├── views                       
-│   	├── 01.html					// 线上首页结构及js代码
-|   	└── 02.html					// 线上详情页结构及js代码
+│   ├── 01.html					// 线上首页结构及js代码
+|	└── 02.html					// 线上详情页结构及js代码
 ├── public  
-|   	├── 01.css					// 线上首页样式
-|  	├── 02.css					// 线上详情页样式
-|   	├── iconfont.css			// 引用的字体图标
-|   	├── template-web.js			// 模板引擎用于渲染
-|   	└── tool.js					// 轮播图辅助工具
+|	├── 01.css					// 线上首页样式
+|	├── 02.css					// 线上详情页样式
+|	├── iconfont.css			// 引用的字体图标
+|	├── template-web.js			// 模板引擎用于渲染
+|	└── tool.js					// 轮播图辅助工具
 └── react-admin-client			//后台管理页面工作区
 	├── node_modules			//存放用包管理工具下载的包
 	├── public					//存放静态文件的文件夹
@@ -36,8 +36,9 @@ DEMO
 	├── src						//主要代码存放的文件夹
 	│   ├── api					//存放API的文件夹
 	│   │   ├── ajax.js			//发送AJAX请求的js文件
-	|   |   └── index.js		//用ajax.js中的函数封装的与后端交互的API
+	|	|   └── index.js		//用ajax.js中的函数封装的与后端交互的API
 	│   ├── components			//组件文件夹
+	│   │   │
 	│   │   ├── EditEmailForm	//修改Email信息的组件
 	│   │   ├── EditGenderForm	//修改性别的组件
 	│   │   ├── EditNickForm	//修改用户名的组件
@@ -51,13 +52,14 @@ DEMO
 	│   │   └── TopHeader		//页面头部区域组件
 	│   ├── config				//配置文件夹
 	│   │   ├── articleTypeConfig.js	//存放文章类型-值对的对象数组
-	|   |   └── menuConfig.js			//存放左部导航栏菜单信息的对象数组
+	|	|   └── menuConfig.js			//存放左部导航栏菜单信息的对象数组
 	│   ├── pages				//页面文件夹（路由组件文件夹）
 	│   │   ├── Admin			//后台管理页面
-	|   │   │   ├── AdminList	//文章列表
-	|   │   │   ├── AdminLuru	//文章录入|编辑
-	|   │   │   ├── Home		//主页
-	||	|   └── InfoChange	//个人信息页面
+	|	│   │   │ 
+	|	│   │   ├── AdminList	//文章列表
+	|	│   │   ├── AdminLuru	//文章录入|编辑
+	|	│   │   ├── Home		//主页
+	|	|	|   └── InfoChange	//个人信息页面
 	|	|   └── Login			//登录注册页面
 	|	│       ├── Log			//登录
 	|	|		└── Reister		//注册
