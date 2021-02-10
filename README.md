@@ -20,10 +20,10 @@ DEMO
 
 ### 目录结构描述
 
-├── README.md                   		 // help
+├── README.md                   		 // help<Br/>
 ├── views                      
 │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 01.html					// 线上首页结构及js代码<Br/>
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 02.html					// 线上详情页结构及js代码<Br/>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 02.html					// 线上详情页结构及js代码<Br/>
 ├── public  
 |   ├── 01.css					// 线上首页样式<Br/>
 |   ├── 02.css					// 线上详情页样式<Br/>
